@@ -1,0 +1,317 @@
+#root {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ body {
+  background-color: #f4e1e0;
+  line-height: 1.2;
+  margin: 0;
+ }
+
+/* .background-image-wrapper {
+  position: fixed;             
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./download.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; 
+} */
+
+/**********************************************************************************************************************/  
+HEADER
+.header{
+  position: sticky;
+    top: 0;
+    z-index: 1000
+}
+
+.headerDesign{
+  width: 100%;
+  height: 90px;
+  background-color: #f4e1e0;
+  display: flex; /* arrange items in a row */
+  align-items: center;
+  padding: 0px 20px;     /*breathing space on the sides, by that walls(margin basically)*/
+  justify-content: space-between;
+}
+#menu {
+  height: 30px;              /* thin horizontal line */
+  width: 100%;
+  background-color: #6e484b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.menuButtons{
+  background-color: transparent;
+  color: #f4e1e0;
+  padding: 0rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+/*TITLE*/
+#mainHeading{
+  font-size: 40px;
+  color: #6e484b;
+}
+
+/*HAMBURGER MENU*/
+.ham-menu{
+  height: 20px;
+  width: 30px;
+  position: relative;
+}
+
+.ham-menu span{
+  height: 7px;
+  width: 100%;
+  background-color: #6e484b;
+  border-radius: 25px;
+  position: absolute;
+}
+
+#ham1{
+  top: 0;
+}
+
+#ham1{
+  top: 50%;
+}
+
+#ham3{
+  top: 100%;
+}
+
+/*SHOPPING CART*/
+.Cart{
+  color: #6e484b;
+  font-size: 25px;
+}
+
+
+
+/*******************************************************************************************/
+
+.block1{
+  height: 45vw;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.leftHalf{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightHalf{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 7vw;
+  color: #6e484b;
+  font-family: "lobster bisque";
+
+}
+
+.doodles{
+  height: 60%;
+}
+
+/********************************************************************************/
+/* BLOCK 2 */
+
+.block2{
+  background-color: #bd8e89;
+  text-align: center;
+  font-size: 9vw;
+  color: #f4e1e0;
+  min-height: 40vw;
+  font-family: "lobster bisque";
+  padding: 6.5vw;
+}
+
+.orderbutton{
+  background-color: transparent;
+  font-size: 3vw;
+  border-radius: 1vw;
+  padding: 5px 5px;
+}
+
+#orderbutton1{
+  color: #f4e1e0;
+  border: 0.5vw solid #f4e1e0;
+}
+
+#orderbutton2{
+  color: #bd8e89;
+  border: 0.5vw solid #bd8e89;
+}
+
+/*********************************************************************************/
+/* WAVE PATTERNS */
+
+/* .wave{
+  aspect-ratio: 900/200;
+  background: no-repeat center;
+  background-size: cover;
+  
+}
+
+#wave1{
+background-image: url(./wave-haikei.svg);
+}
+
+#wave2{
+  background-image: url(./wave-haikei2.svg);
+} */
+
+/*****************************************************************************************/
+/* BLOCK 3 */
+
+.block3{
+  text-align: center;
+  font-size: 6vw;
+  padding: 6.5vw 1vw;
+  min-height: 65vw;
+  font-family: "lobster bisque";
+  color: #6e484b;
+}
+
+/*this is for the images */
+.scroll-container {
+  flex-wrap: nowrap;
+  display: flex;
+  gap: 2px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scrollbar-width: none;  /*removing arrows*/
+}
+
+.scroll-container figure {
+  text-align: center;
+  margin: 0;
+  padding: 1rem 15px;
+}
+
+.scroll-container img {
+  height: auto;
+  width: 35vw;
+  display: block;
+}
+
+.scroll-container figcaption{
+  font-size: 3vw;
+  color: #bd8e89;
+  white-space: normal;
+}
+
+/*this is for the arrows*/
+.carousel{
+  position: relative;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #6e484b;
+  opacity: 60%;
+  font-size: 5vw;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1.6vw 2.6vw;
+  border-radius: 15%;
+  transition: transform 0.2s ease;
+  color: #f4e1e0;
+}
+
+.arrow:hover{
+ transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.leftarrow {
+  left: 2vw;
+}
+
+.arrow.rightarrow {
+  right: 2dvw;
+}
+
+/******************************************************************************************/
+/* BLOCK 4 */
+
+.block4{
+  min-height: 60vw;
+  background-color: #6e484b;
+  padding: 6.5vw 2rem;
+  font-size: 6vw;
+  color: #bd8e89;
+  font-family: "lobster bisque";
+}
+
+.container{
+  min-height: 4rem;
+  padding: 1.5rem 0rem;
+  overflow: auto;
+}
+
+.doodles2{
+  width: 40%;
+  float: left;
+  margin-right: 1rem;
+}
+
+.container p{
+  font-size: 4vw;
+  margin-top: 0;
+}
+
+/****************************************************************************/
+/* CONTACT DEATILS */
+
+/* .contactDeets{
+  font-family: "lobster bisque";
+  padding: 2rem 2rem;
+  font-size: 4.5vw;
+  color: #6e484b;
+  min-height: 45vw;
+}
+.contactDeets p{
+  font-size: 2vw;
+} */
+
+/*************************************************/
+/* Dealing with buttons hover and clicked */
+.ham-menu, .Cart, .orderbutton{
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.ham-menu:hover, .Cart:hover, .orderbutton:hover{
+  transform: scale(1.1);
+
+}
+.menuButtons:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+.orderbutton:focus, .arrow:focus, .menuButtons:focus{
+  outline: none;
+}
+

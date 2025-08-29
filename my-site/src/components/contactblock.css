@@ -1,0 +1,10 @@
+.contactDeets{
+  font-family: "lobster bisque";
+  padding: 2rem 2rem;
+  font-size: 4.5vw;
+  color: #6e484b;
+  min-height: 45vw;
+}
+.contactDeets p{
+  font-size: 2vw;
+}

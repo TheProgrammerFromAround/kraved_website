@@ -1,0 +1,79 @@
+.itemBlock{
+  width: 100%;
+  background-color: #333;
+  position: relative;
+  display: flex;
+}
+
+.imageSide{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  /* background-color: red; */
+  height: 30vw;
+}
+
+.textSide{
+  width: 50%;
+  /* background-color: aqua; */
+  font-size: 3vw;
+  line-height: 2;
+  color: #6e484b;
+}
+
+
+
+
+
+.dropdown {
+  position: relative;
+  background-color: red;
+  width: 25vw;
+}
+
+.inputBar{
+    /* width: 20%; */
+    width: 4vw;
+    margin-left: 3px;
+    height: 3vw;
+    font-size: 1.8vw;
+    outline: none;
+  }
+
+.dropdown-btn {
+  padding: 1px 2px;
+  cursor: pointer;
+  width: 3vw;
+  height: 3vw;
+  font-size: 1.8vw;
+  background-color: white;
+}
+
+
+.fig-container{
+  background-color: #6e484b;
+  width:40%;
+}
+
+/* .dropdown-menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 6px 0;
+  min-width: 120px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+} */
