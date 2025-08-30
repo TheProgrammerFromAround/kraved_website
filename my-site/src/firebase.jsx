@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc, collection, getDocs} from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -15,11 +15,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const getItemData = async () => {
-  const docRef = doc(db, 'products', 'Item1');
-  const docSnap = await getDoc(docRef);
-  return docSnap.data();
+
+// for gettign datat of a specific item, maybe usuful for item pages
+// const getItemData = async (id) => {
+//   const docRef = doc(db, 'products', id);
+//   const docSnap = await getDoc(docRef);
+//   return docSnap.exists()? docSnap.data(): null;
+
+// }
+
+const getAllItemsData = async() => {
+  const docRef = collection(db, 'products');
+    const docSnap = await getDocs(docRef);
+    return docSnap.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
 }
 
-export {getItemData}
+// export {getItemData}
+export {getAllItemsData}

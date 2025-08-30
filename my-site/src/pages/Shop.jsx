@@ -1,92 +1,40 @@
 import Header from '../components/Header'
+import QuantityDropdown from '../components/QuantityDropdown'
 import ContactBlock from '../components/ContactBlock'
-import {getItemData} from '../firebase';
+import {getAllItemsData} from '../firebase';
 import { useEffect, useState } from 'react';
 import "./shop.css";
 
 export default function Shop(){
-    
-  const [item, setItem] = useState(0);
 
-  useEffect(() => {
-    const getData = async () => {
-      let data = await getItemData();
-      setItem(data);
-    }
-
-    getData();
-  })
-
-//  const [isOpen, setIsOpen] = useState(false);
+    const [items, setItems] = useState([]);
+      useEffect(() => {
+        const getData = async () => {
+          let data = await getAllItemsData();
+          setItems(data);
+        };
+        getData();
+     }, [])
 
     return(
         <>
-        <Header />
-        <h1>Shop page</h1>
+          <Header />
+          <h1>Shop page</h1>
 
-        <div className="itemBlock">
-            <div className="imageSide">
-                {/* <img src={item.image}*/}
-                <img src="download.jpg" />
+          <QuantityDropdown />
+                  
+          <div className='items-container'>
+              {items.map((item) => (
+                  <figure className='item' key={item.id}>
+                      <img src="./download.jpg"/>
+                      <figcaption>{item.name}<br/>{item.description}<br/>AED {item.price}<br/></figcaption>
+                      <QuantityDropdown />
+                  </figure>
+              ))}
 
-            </div>
+          </div>
 
-            <div className="textSide">
-                {item.name}<br/>
-                {item.description}<br/>
-                {item.price}<br/>
-                Quantity mcskda; jvfnd jvsn djsbfls. 
-                <br/>add to cart
-                
-                
-                <div className="dropdown">
-                    Quantity:
-
-                    <input className="inputBar" type="text" defaultValue="1"/>
-
-                    <button className='dropdown-btn'>▼</button>
-                    
-
-                   
-
-
-                    {/* <button 
-                      className="dropdown-btn" 
-                      onClick={() => setIsOpen(!isOpen)}
-                    >
-                    ▼
-                    </button>
-
-                    {isOpen && (
-                      <ul className="dropdown-menu">
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                      </ul>
-                    )} */}
-                </div>
-               
-                
-            </div>
-        </div>
-
-
-        <figure className='fig-container'>
-            <img src="./download.jpg"/>
-            <figcaption>icecream<br/>made with love eirhliqw hwfakq eutahkl mfre knmewk kmewl </figcaption>
-        </figure>
-
-
-        <p>blah blah 
-
-        </p>
-        <figure>
-            <img src="/download.jpg"/>
-            <figcaption>icecream<br/>made with love hfeafiu eywh UEHYWU eryaktwut eYIU ETUR EGRWU</figcaption>
-        </figure>
-
-         
-        <ContactBlock />
+          <ContactBlock />
 
         </>
     )
