@@ -1,60 +1,57 @@
-        /* .dropdown {
-          position: relative;
-          background-color: red;
-          width: 25vw;
-        }
-
-        .inputBar{
-          width: 4vw;
-          margin-left: 3px;
-          height: 3vw;
-          font-size: 1.8vw;
-          outline: none;
-        }
-
-        .dropdown-btn {
-          padding: 1px 2px;
-          cursor: pointer;
-          width: 3vw;
-          height: 3vw;
-          font-size: 1.8vw;
-          background-color: white;
-        } */
+.dropdown{
+  background-color: blueviolet;
+  position: relative;
+  align-items: center;
+  display: inline;
+}
 
 .inputBar{
     width: 4vw;
     height: 3vw;
-    font-size: 1.8vw;
+    outline: none;
 }
+
 .dropdown-btn {
     width: 3vw;
     height: 3vw;
     cursor: pointer;
     padding:1px 2px;
-    font-size: 1.8vw;
 }
 
+.inputBar, .dropdown-btn, .dropdown-menu{
+    font-size: 1.8vw;
+    border: 0.2vw solid gray;
+    border-radius: 0.25vw;
 
+}
 
-/* .dropdown-menu {
+.dropdown-menu{
+  background-color: white;
   position: absolute;
-  top: 100%; 
-  left: 0;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  width: 4vw;
   list-style: none;
-  margin: 4px 0 0 0;
-  padding: 6px 0;
-  min-width: 120px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 0;
+  margin: 0;
+  max-height: 12vw;
+  overflow-y: auto; /* scroll if more */
+  text-align: left;
+  right: 3vw;
+}
+
+/* scrollbar styling */
+.dropdown-menu::-webkit-scrollbar {
+  width: 0.6vw;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: lightgrey;
+  border-radius: 1vw;
 }
 
 .dropdown-menu li {
-  padding: 8px 12px;
+  padding: 0.3vw;
   cursor: pointer;
 }
 
-.dropdown-menu li:hover {
-  background: #f0f0f0;
-} */
+.dropdown-menu li:hover{
+  background-color: lightgray;
+}
