@@ -3,10 +3,14 @@ import QuantityDropdown from '../components/QuantityDropdown'
 import ContactBlock from '../components/ContactBlock'
 import {getAllItemsData} from '../firebase';
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import "./shop.css";
 
 export default function Shop(){
 
+    const navigate = useNavigate();
+
+    //getting the item and data from database 
     const [items, setItems] = useState([]);
       useEffect(() => {
         const getData = async () => {
@@ -28,10 +32,11 @@ export default function Shop(){
                   <figure className='item' key={item.id}>
                       <img src="./download.jpg"/>
                       <figcaption>{item.name}<br/>{item.description}<br/>AED {item.price}<br/></figcaption>
-                      <QuantityDropdown />
+                      <QuantityDropdown /><br/>
+                      <button className='addtocartButton' onClick= {() => navigate("/cart")}>Add to Cart</button>
                   </figure>
               ))}
-
+          
           </div>
 
           <ContactBlock />

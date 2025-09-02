@@ -1,7 +1,7 @@
 
 .items-container{
   display: grid;
-  background-color: #6e484b;
+  background-color: #f4e1e0;
   grid-template-columns: repeat(2, 1fr);
   gap: 4.5vw;
   padding: 4.5vw;
@@ -10,11 +10,25 @@
 .item{
   text-align: center;
   font-size: 2.5vw;
-  background-color: aquamarine;
   margin: 0%;
-  color: black;
+  color: #6e484b;
 }
 
 .item img{
   width: 100%;
+}
+
+.addtocartButton{
+  background-color: #f4e1e0;
+  border: 0.2vw solid #6e484b86;
+  color: #6e484b;
+  border-radius: 0.25vw;
+  font-size: 1.8vw;
+  transition: transform 0.2s ease;
+
+}
+
+.addtocartButton:hover{
+  background-color: #6e484b40;
+  transform: scale(1.1);
 }
